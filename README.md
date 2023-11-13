@@ -22,8 +22,8 @@ Npx prisma migrate dev
 Npm i @prisma/cliente -D
 Npx prisma studio para abrir a ferramenta integrada e ver o banco de dados que você criou
 Npm i prisma -D
-Npm prisma init -- datasource-provider SQLite
-Npx prisma migrate dev  vai ler meu arquivo schema. Prisma e vai detectar automaticamente todas as alterações que eu fiz neste arquivo desde a ultima vez que eu executei este comandoAgora dar um nome para minha migration
+Npm prisma init --  datasource-provider SQLite
+Npx prisma migrate dev  vai ler meu arquivo schema. Prisma e vai detectar automaticamente todas as alterações que eu fiz neste arquivo desde a ultima vez que eu executei este comando Agora dar um nome para minha migration
 Npm i zod   
 Npm i @fastify/cors
 
