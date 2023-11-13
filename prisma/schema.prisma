@@ -1,0 +1,29 @@
+// prisma.schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model new_User {
+  id        String   @id @default(uuid())
+  name      String
+  githubId  Int      @unique
+  login     String
+  avatarUrl String
+  memories  Memory[]
+}
+
+model Memory {
+  id        String   @id
+  userId    String
+  coverUrl  String
+  content   String
+  isPublic  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      new_User @relation(fields: [userId], references: [id])
+  // ^ Alterado para referenciar o modelo correto (new_User) ao invés de User
+}
